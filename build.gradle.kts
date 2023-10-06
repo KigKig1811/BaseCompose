@@ -1,17 +1,17 @@
 plugins {
-    id("com.android.application") apply false
-    id("org.jetbrains.kotlin.android") apply false
-    id("com.android.library") apply (false)
-    id("com.google.dagger.hilt.android") apply (false)
+    id ("com.android.application") apply(false)
+    id ("com.android.library") apply(false)
+    id ("org.jetbrains.kotlin.android") apply(false)
+    id ("com.google.dagger.hilt.android") apply(false)
     id("org.jetbrains.kotlin.jvm") apply (false)
 }
 
 tasks.create<Delete>("clean") {
-    delete = setOf(
+    delete  = setOf(
         rootProject.buildDir
     )
 }
-gradle.projectsLoaded {
+gradle.projectsLoaded{
     configurations.all {
         configurations.all {
             resolutionStrategy {

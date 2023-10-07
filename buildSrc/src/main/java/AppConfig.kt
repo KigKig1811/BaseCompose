@@ -1,5 +1,5 @@
 object AppConfig {
-    const val applicationId = "com.xt.notes-app"
+    const val applicationId = "com.xt.notesapp"
     const val testRunner = "androidx.test.runner.AndroidJUnitRunner"
     const val minSdkVersion = 21
     const val compileSdkVersion = 34

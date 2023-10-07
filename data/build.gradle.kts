@@ -1,6 +1,7 @@
 import dependencies.addApiResponseModule
 import dependencies.addDiModule
 import dependencies.addDomainModule
+import dependencies.addRoomDependencies
 
 plugins {
     plugins.`android-core-library`
@@ -12,6 +13,7 @@ android {
 
 dependencies {
     addApiResponseModule(configurationName = "api")
+    addRoomDependencies()
     addDiModule()
     addDomainModule()
 }

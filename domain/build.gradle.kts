@@ -1,4 +1,5 @@
 import dependencies.addEntityModule
+import dependencies.addRoomDependencies
 
 plugins {
     plugins.`android-core-library`
@@ -9,5 +10,6 @@ android {
 }
 
 dependencies {
+    addRoomDependencies()
     addEntityModule(configurationName = "api")
 }

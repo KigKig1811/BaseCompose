@@ -49,6 +49,12 @@ fun DependencyHandler.addGsonDependencies(configurationName:String = "implementa
     add(configurationName,Dependencies.gson)
 }
 
+fun DependencyHandler.addRoomDependencies(configurationName:String = "implementation"){
+    add(configurationName,Dependencies.roomRunTime)
+    add("kapt",Dependencies.roomCompiler)
+    add(configurationName,Dependencies.roomKtx)
+}
+
 
 fun DependencyHandler.addLeakcanaryDependencies(){
     add("debugImplementation",Dependencies.leakcanary)
@@ -62,3 +68,4 @@ fun DependencyHandler.addAndroidTestsDependencies() {
     add("debugImplementation",Dependencies.composeTooling)
     add("debugImplementation",Dependencies.composeTestManifest)
 }
+

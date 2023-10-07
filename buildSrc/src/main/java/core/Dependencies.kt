@@ -3,6 +3,7 @@ package core
 internal object Dependencies {
     const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtxVersion}"
     const val composeMaterial = "androidx.compose.material:material:${Versions.materialVersion}"
+    const val composeMaterial3 = "androidx.compose.material3:material3:${Versions.material3Version}"
     const val composeActivity = "androidx.activity:activity-compose:${Versions.activityComposeVersion}"
     const val composeUi = "androidx.compose.ui:ui:${Versions.composeVersion}"
     const val composeNavigation = "androidx.navigation:navigation-compose:${Versions.composeNavigationVersion}"
@@ -18,6 +19,10 @@ internal object Dependencies {
     const val hiltNavCompose = "androidx.hilt:hilt-navigation-compose:${Versions.hiltNavigationComposeVersion}"
     val hiltCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hiltVersion}"
 
+    const val roomRunTime = "androidx.room:room-runtime:${Versions.roomVersion}"
+    const val roomCompiler = "androidx.room:room-compiler:${Versions.roomVersion}"
+    const val roomKtx = "androidx.room:room-ktx:${Versions.roomVersion}"
+
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofitVersion}"
     const val rxJava3adapter = "com.squareup.retrofit2:adapter-rxjava3:${Versions.retrofitVersion}"
     const val retrofitGsonConverter = "com.squareup.retrofit2:converter-gson:${Versions.retrofitVersion}"
@@ -29,7 +34,6 @@ internal object Dependencies {
     const val leakcanary = "com.squareup.leakcanary:leakcanary-android:${Versions.leakcanaryVersion}"
     const val timber = "com.jakewharton.timber:timber:${Versions.timberVersion}"
     const val coil = "io.coil-kt:coil-compose:${Versions.coilVersion}"
-
 
     const val jUnit = "androidx.compose.ui:ui-test-junit4:${Versions.composeVersion}"
     const val jUnitExt = "androidx.test.ext:junit:${Versions.jUnitExtVersion}"

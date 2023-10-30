@@ -1,3 +1,4 @@
+import dependencies.addCommonModule
 import dependencies.addEntityModule
 import dependencies.addRoomDependencies
 
@@ -11,5 +12,6 @@ android {
 
 dependencies {
     addRoomDependencies()
+    addCommonModule()
     addEntityModule(configurationName = "api")
 }

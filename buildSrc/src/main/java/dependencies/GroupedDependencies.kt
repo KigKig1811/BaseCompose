@@ -1,9 +1,11 @@
 package dependencies
+
 import core.Dependencies
 
 internal val androidComposeDependencies = listOf(
     Dependencies.coreKtx,
     Dependencies.composeMaterial,
+    Dependencies.composeMaterialIconExtended,
     Dependencies.composeMaterial3,
     Dependencies.composeActivity,
     Dependencies.composeUi,

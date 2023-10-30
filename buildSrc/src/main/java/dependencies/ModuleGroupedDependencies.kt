@@ -1,9 +1,13 @@
 package dependencies
 
-import core.*
+import core.ModulesDep
 
 internal val featureModule = listOf(
-    ModulesDep.abc,
-    ModulesDep.def,
+    ModulesDep.bookmark,
+    ModulesDep.credit,
+    ModulesDep.detail,
+    ModulesDep.feed,
+    ModulesDep.paging,
+    ModulesDep.setting,
 )
 

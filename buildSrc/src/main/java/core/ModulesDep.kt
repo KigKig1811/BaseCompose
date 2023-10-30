@@ -8,7 +8,11 @@ object ModulesDep {
     const val entity = ":model:entity"
     const val common = ":common"
 
-    const val abc = ":features:abc"
-    const val def = ":features:def"
+    const val bookmark = ":features:feature-bookmark"
+    const val credit = ":features:feature-credit"
+    const val detail = ":features:feature-detail"
+    const val feed = ":features:feature-feed"
+    const val paging = ":features:feature-paging"
+    const val setting = ":features:feature-setting"
 }
 

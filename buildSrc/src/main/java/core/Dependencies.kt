@@ -3,6 +3,7 @@ package core
 internal object Dependencies {
     const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtxVersion}"
     const val composeMaterial = "androidx.compose.material:material:${Versions.materialVersion}"
+    const val composeMaterialIconExtended = "androidx.compose.material:material-icons-extended:${Versions.materialIconExtendedVersion}"
     const val composeMaterial3 = "androidx.compose.material3:material3:${Versions.material3Version}"
     const val composeActivity = "androidx.activity:activity-compose:${Versions.activityComposeVersion}"
     const val composeUi = "androidx.compose.ui:ui:${Versions.composeVersion}"

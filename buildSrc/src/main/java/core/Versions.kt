@@ -5,6 +5,7 @@ internal object Versions {
     const val composeNavigationVersion = "2.5.3"
     const val coreKtxVersion = "1.8.0"
     const val materialVersion = "1.3.1"
+    const val materialIconExtendedVersion = "1.5.4"
     const val material3Version = "1.0.1"
     const val activityComposeVersion = "1.6.1"
     const val lifecycleVersion = "2.5.1"

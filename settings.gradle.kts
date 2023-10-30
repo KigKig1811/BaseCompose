@@ -1,5 +1,23 @@
 @file:Suppress("UnstableApiUsage")
 
+include(":features:feature-setting")
+
+
+include(":features:feature-paging")
+
+
+include(":features:feature-feed")
+
+
+include(":features:feature-detail")
+
+
+include(":features:feature-credit")
+
+
+include(":features:feature-bookmark")
+
+
 include(":di")
 
 
@@ -53,5 +71,3 @@ include(":data")
 include(":domain")
 include(":common")
 
-include(":features:abc")
-include(":features:def")

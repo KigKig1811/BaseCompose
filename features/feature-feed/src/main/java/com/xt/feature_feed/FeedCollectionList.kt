@@ -89,7 +89,7 @@ private fun <T : NetfItem> FeedCollection(
                 .padding(start = Dimens.PaddingNormal)
         ) {
             Text(
-                text = /*stringResource(id = feedCollection.sortTypeResourceId)*/ "",
+                text = stringResource(id = feedCollection.sortTypeResourceId),
                 maxLines = 1,
                 color = MaterialTheme.colors.onSurface,
                 modifier = Modifier

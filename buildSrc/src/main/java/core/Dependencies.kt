@@ -30,6 +30,8 @@ internal object Dependencies {
     const val okhHttp3 = "com.squareup.okhttp3:okhttp:${Versions.okhttp3Version}"
     const val okhHttp3Interceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp3Version}"
     const val gson = "com.google.code.gson:gson:${Versions.gsonVersion}"
+    const val moshi = "com.squareup.moshi:moshi-kotlin:${Versions.moshi}"
+    const val retrofitMoshi = "com.squareup.retrofit2:converter-moshi:${Versions.retrofitVersion}"
 
     const val kotlinCoroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutinesVersion}"
     const val leakcanary = "com.squareup.leakcanary:leakcanary-android:${Versions.leakcanaryVersion}"

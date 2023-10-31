@@ -8,9 +8,10 @@ import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.material.MaterialTheme
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -25,7 +26,7 @@ import androidx.compose.ui.unit.dp
 fun NetfChillProgressBar() {
     Column(
         modifier = Modifier
-            .fillMaxWidth(),
+            .fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -35,7 +36,7 @@ fun NetfChillProgressBar() {
 
 @Composable
 fun HorizontalDottedProgressBar() {
-    val color = MaterialTheme.colors.primary
+    val color = MaterialTheme.colorScheme.primary
     val infiniteTransition = rememberInfiniteTransition(label = "")
     val state = infiniteTransition.animateFloat(
         initialValue = 0f,

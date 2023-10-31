@@ -1,6 +1,5 @@
 package com.xt.notesapp.component
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.material.BottomNavigation
@@ -8,8 +7,8 @@ import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.ContentAlpha
 import androidx.compose.material.Icon
 import androidx.compose.material.LocalContentColor
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -22,14 +21,15 @@ fun NetfChillBottomBar(
     currentRoute: String,
     navigateToRoute: (String) -> Unit
 ) {
-    val currentRoute = tabs.first { it.route == currentRoute }
+     @Suppress("NAME_SHADOWING") val currentRoute = tabs.first { it.route == currentRoute }
 
     Box(
         modifier = Modifier
-            .background(MaterialTheme.colors.background)
             .navigationBarsPadding()
     ) {
-        BottomNavigation {
+        BottomNavigation(
+            backgroundColor = MaterialTheme.colorScheme.primary
+        ) {
             tabs.forEach { section ->
                 val selected = section == currentRoute
                 BottomNavigationItem(

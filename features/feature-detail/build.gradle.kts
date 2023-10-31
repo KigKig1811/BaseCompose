@@ -3,5 +3,5 @@ plugins {
 }
 
 android {
-    namespace = "com.xt.feature-detail"
+    namespace = "com.xt.feature_detail"
 }

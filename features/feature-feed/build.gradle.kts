@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.xt.feature-feed"
+    namespace = "com.xt.feature_feed"
 }
 
 dependencies {

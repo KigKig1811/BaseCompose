@@ -1,4 +1,5 @@
 import dependencies.addApiResponseModule
+import dependencies.addCommonModule
 import dependencies.addDiModule
 import dependencies.addDomainModule
 import dependencies.addRoomDependencies
@@ -13,7 +14,8 @@ android {
 
 dependencies {
     addApiResponseModule(configurationName = "api")
-    addRoomDependencies()
+    addCommonModule()
     addDiModule()
     addDomainModule()
+    addRoomDependencies()
 }

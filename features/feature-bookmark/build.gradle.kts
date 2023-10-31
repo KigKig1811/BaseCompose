@@ -3,5 +3,5 @@ plugins {
 }
 
 android {
-    namespace = "com.xt.feature-bookmark"
+    namespace = "com.xt.feature_bookmark"
 }

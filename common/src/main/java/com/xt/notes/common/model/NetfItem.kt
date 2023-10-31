@@ -1,12 +1,14 @@
 package com.xt.notes.common.model
 
-open class NetfItem(
-    open val id: Int,
-    open val overview: String,
-    open val releaseDate: String?,
-    open val posterUrl: String?,
-    open val backdropUrl: String?,
-    open val name: String,
-    open val voteAverage: Double,
-    open val voteCount: Int,
-)
+import android.os.Parcelable
+
+interface NetfItem : Parcelable {
+    val id: Int
+    val overview: String
+    val releaseDate: String?
+    val posterUrl: String?
+    val backdropUrl: String?
+    val name: String
+    val voteAverage: Double
+    val voteCount: Int
+}

@@ -3,5 +3,5 @@ plugins {
 }
 
 android {
-    namespace = "com.xt.feature-paging"
+    namespace = "com.xt.feature_paging"
 }

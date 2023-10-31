@@ -3,5 +3,5 @@ plugins {
 }
 
 android {
-    namespace = "com.xt.feature-setting"
+    namespace = "com.xt.feature_setting"
 }

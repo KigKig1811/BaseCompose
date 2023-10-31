@@ -3,5 +3,5 @@ plugins {
 }
 
 android {
-    namespace = "com.xt.feature-credit"
+    namespace = "com.xt.feature_credit"
 }

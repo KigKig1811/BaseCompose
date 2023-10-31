@@ -18,8 +18,12 @@
             <option value="$PROJECT_DIR$/di" />
             <option value="$PROJECT_DIR$/domain" />
             <option value="$PROJECT_DIR$/features" />
-            <option value="$PROJECT_DIR$/features/abc" />
-            <option value="$PROJECT_DIR$/features/def" />
+            <option value="$PROJECT_DIR$/features/feature-bookmark" />
+            <option value="$PROJECT_DIR$/features/feature-credit" />
+            <option value="$PROJECT_DIR$/features/feature-detail" />
+            <option value="$PROJECT_DIR$/features/feature-feed" />
+            <option value="$PROJECT_DIR$/features/feature-paging" />
+            <option value="$PROJECT_DIR$/features/feature-setting" />
             <option value="$PROJECT_DIR$/model" />
             <option value="$PROJECT_DIR$/model/apiresponse" />
             <option value="$PROJECT_DIR$/model/entity" />

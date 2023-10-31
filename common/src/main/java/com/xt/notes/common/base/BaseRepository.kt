@@ -6,6 +6,7 @@ import com.xt.notes.common.utils.Resource
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.flowOn
 
 abstract class BaseRepository<T>(
     private val context: Context,
@@ -20,5 +21,5 @@ abstract class BaseRepository<T>(
         } catch (t: Throwable) {
             emit(Resource.Error(context.getString(R.string.failed_loading_msg)))
         }
-    }
+    }.flowOn(ioDispatcher)
 }

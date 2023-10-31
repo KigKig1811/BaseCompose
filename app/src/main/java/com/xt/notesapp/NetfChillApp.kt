@@ -10,6 +10,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
+import com.xt.feature_feed.MovieFeedScreen
 import com.xt.notes.common.utils.MainDestinations
 import com.xt.notesapp.component.NetfChillBottomBar
 import com.xt.notesapp.utils.HomeSections
@@ -18,23 +19,25 @@ import com.xt.notesapp.utils.HomeSections
 @Composable
 fun NetfChillApp() {
     val appState = rememberNetfChillAppState()
-    Scaffold(
-        bottomBar = {
-            if (appState.shouldShowBottomBar) {
-                NetfChillBottomBar(
-                    tabs = appState.bottomBarTabs,
-                    currentRoute = appState.currentRoute!!,
-                    navigateToRoute = appState::navigationToBottomBarRoute
-                )
-            }
+    Scaffold(bottomBar = {
+        if (appState.shouldShowBottomBar) {
+            NetfChillBottomBar(
+                tabs = appState.bottomBarTabs,
+                currentRoute = appState.currentRoute!!,
+                navigateToRoute = appState::navigationToBottomBarRoute
+            )
         }
-    ) { innerPaddingModifier ->
+    }) { innerPaddingModifier ->
         NavHost(
             navController = appState.navHostController,
             startDestination = MainDestinations.HOME_ROUTE,
             modifier = Modifier.padding(innerPaddingModifier)
         ) {
-
+            navigationScreens(
+                onMovieSelected = {},
+                onTvShowSelected = {},
+                navController = appState.navHostController
+            )
         }
     }
 }
@@ -45,11 +48,10 @@ private fun NavGraphBuilder.navigationScreens(
     navController: NavController,
 ) {
     navigation(
-        route = MainDestinations.HOME_ROUTE,
-        startDestination = HomeSections.MOVIE_SECTION.route
+        route = MainDestinations.HOME_ROUTE, startDestination = HomeSections.MOVIE_SECTION.route
     ) {
         composable(route = HomeSections.MOVIE_SECTION.route) {
-
+            MovieFeedScreen(onClick = { onMovieSelected(it.id) }, navController = navController)
         }
         composable(route = HomeSections.TV_SHOW_SECTION.route) {
 

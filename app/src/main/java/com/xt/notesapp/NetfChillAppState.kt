@@ -8,6 +8,7 @@ import androidx.navigation.NavGraph
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.xt.notes.common.utils.MainDestinations
 import com.xt.notesapp.utils.HomeSections
 
 @Composable
@@ -43,7 +44,15 @@ class NetfChillAppState(val navHostController: NavHostController) {
             }
         }
     }
+
+    fun navigateToMovieDetail(id: Int) {
+        navHostController.navigate("${MainDestinations.NETFCHILL_MOVIE_DETAIL_ROUTE}/$id")
+    }
+
 }
+
+
+
 private val NavGraph.startDestination: NavDestination?
     get() = findNode(startDestinationId)
 

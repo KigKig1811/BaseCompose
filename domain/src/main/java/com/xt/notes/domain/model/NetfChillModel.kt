@@ -14,3 +14,15 @@ data class Movie(
     override val voteAverage: Double,
     override val voteCount: Int
 ): NetfItem
+
+@Parcelize
+data class TvShow(
+    override val id: Int,
+    override val overview: String,
+    override val releaseDate: String?,
+    override val posterUrl: String?,
+    override val backdropUrl: String?,
+    override val name: String,
+    override val voteAverage: Double,
+    override val voteCount: Int
+): NetfItem

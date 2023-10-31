@@ -1,4 +1,4 @@
-package com.xt.feature_feed
+package com.xt.feature_feed.base
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Box
@@ -7,6 +7,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.xt.common.R
+import com.xt.feature_feed.movie.MovieFeedViewModel
+import com.xt.feature_feed.tvshow.TvShowFeedViewModel
 import com.xt.notes.common.model.NetfChillType
 import com.xt.notes.common.model.NetfItem
 import com.xt.notes.common.ui.Content
@@ -25,6 +27,22 @@ fun MovieFeedScreen(
         onClick = onClick,
         resourceId = R.string.movies
     )
+}
+
+@Composable
+fun TvShowScreen(
+    onClick: (NetfItem) -> Unit,
+    navController: NavController,
+    viewModel: TvShowFeedViewModel = hiltViewModel()
+) {
+    FeedScreen(
+        viewModel = viewModel,
+        type = NetfChillType.TV_SERIES,
+        navController = navController,
+        onClick = onClick,
+        resourceId = R.string.tv_series
+    )
+
 }
 
 @Composable

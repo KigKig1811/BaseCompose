@@ -2,6 +2,7 @@ package com.xt.notes.data.di
 
 import com.xt.data.BuildConfig
 import com.xt.notes.data.network.MovieService
+import com.xt.notes.data.network.TvShowService
 import com.xt.notes.data.utils.createNetworkClient
 import dagger.Module
 import dagger.Provides
@@ -22,4 +23,9 @@ class NetworkModule {
     @Provides
     fun provideMovieService(retrofit: Retrofit): MovieService =
         retrofit.create(MovieService::class.java)
+
+    @Singleton
+    @Provides
+    fun provideTvShowService(retrofit: Retrofit): TvShowService =
+        retrofit.create(TvShowService::class.java)
 }

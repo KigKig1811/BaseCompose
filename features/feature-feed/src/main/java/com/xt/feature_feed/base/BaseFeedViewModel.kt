@@ -1,4 +1,4 @@
-package com.xt.feature_feed
+package com.xt.feature_feed.base
 
 import com.xt.notes.common.base.BaseRefreshViewModel
 import com.xt.notes.common.model.NetfItem

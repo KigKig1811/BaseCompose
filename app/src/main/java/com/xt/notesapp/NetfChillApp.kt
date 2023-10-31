@@ -7,10 +7,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.navArgument
 import androidx.navigation.navigation
-import com.xt.feature_feed.MovieFeedScreen
+import com.xt.feature_feed.base.MovieFeedScreen
+import com.xt.feature_feed.base.TvShowScreen
 import com.xt.notes.common.utils.MainDestinations
 import com.xt.notesapp.component.NetfChillBottomBar
 import com.xt.notesapp.utils.HomeSections
@@ -34,7 +37,7 @@ fun NetfChillApp() {
             modifier = Modifier.padding(innerPaddingModifier)
         ) {
             navigationScreens(
-                onMovieSelected = {},
+                onMovieSelected = appState::navigateToMovieDetail,
                 onTvShowSelected = {},
                 navController = appState.navHostController
             )
@@ -54,7 +57,7 @@ private fun NavGraphBuilder.navigationScreens(
             MovieFeedScreen(onClick = { onMovieSelected(it.id) }, navController = navController)
         }
         composable(route = HomeSections.TV_SHOW_SECTION.route) {
-
+            TvShowScreen(onClick = { onTvShowSelected(it.id) }, navController = navController)
         }
         composable(route = HomeSections.BOOKMARK_SECTION.route) {
 
@@ -62,5 +65,15 @@ private fun NavGraphBuilder.navigationScreens(
         composable(route = HomeSections.SETTING_SECTION.route) {
 
         }
+    }
+}
+
+private fun NavGraphBuilder.detailScreens() {
+    composable(
+        route = "${MainDestinations.NETFCHILL_MOVIE_DETAIL_ROUTE}/{${MainDestinations.NETFCHILL_ID_KEY}}",
+        arguments = listOf(
+            navArgument(MainDestinations.NETFCHILL_ID_KEY) { type = NavType.IntType })
+    ) {
+
     }
 }

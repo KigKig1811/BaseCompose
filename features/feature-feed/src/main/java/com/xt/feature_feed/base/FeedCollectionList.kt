@@ -1,4 +1,4 @@
-package com.xt.feature_feed
+package com.xt.feature_feed.base
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column

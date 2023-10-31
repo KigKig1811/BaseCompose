@@ -92,7 +92,7 @@ fun List<MovieDto>.asMovieResult(): List<Movie> =
         )
     }
 
-fun List<TvShowDto>.asTVShowDomainModel(): List<TvShow> =
+fun List<TvShowDto>.asTvShowResult(): List<TvShow> =
     map {
         TvShow(
             it.id,

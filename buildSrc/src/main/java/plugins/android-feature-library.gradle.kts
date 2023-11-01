@@ -1,20 +1,31 @@
 package plugins
-import dependencies.*
+
+import AppConfig
+import dependencies.addAndroLifeCycleDependencies
+import dependencies.addAndroidComposeDependencies
+import dependencies.addAndroidTestsDependencies
+import dependencies.addCoilImageLoadingDependencies
+import dependencies.addCommonModule
+import dependencies.addCoroutinesAndroidDependencies
+import dependencies.addDiModule
+import dependencies.addDomainModule
+import dependencies.addHiltDependencies
+import dependencies.addPagingDependencies
 
 plugins {
     id("com.android.library")
-    id ("org.jetbrains.kotlin.android")
+    id("org.jetbrains.kotlin.android")
     kotlin("kapt")
-    id ("dagger.hilt.android.plugin")
+    id("dagger.hilt.android.plugin")
 }
 
-android{
+android {
     compileSdk = AppConfig.compileSdkVersion
     defaultConfig {
         minSdk = AppConfig.minSdkVersion
         testInstrumentationRunner = AppConfig.testRunner
         consumerProguardFiles("consumer-rules.pro")
-        vectorDrawables{
+        vectorDrawables {
             useSupportLibrary = true
         }
     }
@@ -26,7 +37,7 @@ android{
         jvmTarget = "11"
     }
 
-    buildFeatures{
+    buildFeatures {
         compose = true
     }
 
@@ -41,7 +52,7 @@ android{
     }
 }
 
-dependencies{
+dependencies {
     addDiModule()
     addDomainModule()
     addCommonModule()
@@ -52,4 +63,5 @@ dependencies{
     addCoilImageLoadingDependencies()
     addHiltDependencies()
     addAndroidTestsDependencies()
+    addPagingDependencies()
 }

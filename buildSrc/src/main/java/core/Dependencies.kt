@@ -24,6 +24,9 @@ internal object Dependencies {
     const val roomCompiler = "androidx.room:room-compiler:${Versions.roomVersion}"
     const val roomKtx = "androidx.room:room-ktx:${Versions.roomVersion}"
 
+    const val pagingRuntime = "androidx.paging:paging-runtime:${Versions.paging}"
+    const val pagingCompose = "androidx.paging:paging-compose:${Versions.paging}"
+
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofitVersion}"
     const val rxJava3adapter = "com.squareup.retrofit2:adapter-rxjava3:${Versions.retrofitVersion}"
     const val retrofitGsonConverter = "com.squareup.retrofit2:converter-gson:${Versions.retrofitVersion}"

@@ -24,5 +24,6 @@ internal object Versions {
     const val jUnitExtVersion = "1.1.4"
     const val roomVersion = "2.5.2"
     const val moshi = "1.14.0"
+    const val paging = "3.2.1"
 
 }

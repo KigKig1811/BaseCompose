@@ -25,5 +25,6 @@ internal object Versions {
     const val roomVersion = "2.5.2"
     const val moshi = "1.14.0"
     const val paging = "3.2.1"
+    const val bottomBarAnimated = "1.0.0"
 
 }

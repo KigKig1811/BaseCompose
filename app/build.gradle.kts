@@ -76,4 +76,5 @@ dependencies {
     addNetworkDependencies()
     addLeakcanaryDependencies()
     addAndroidTestsDependencies()
+    addBottomBarAnimated()
 }

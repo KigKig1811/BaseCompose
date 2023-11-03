@@ -48,4 +48,7 @@ internal object Dependencies {
     const val composeTooling = "androidx.compose.ui:ui-tooling:${Versions.composeVersion}"
     const val composeTestManifest = "androidx.compose.ui:ui-test-manifest:${Versions.composeVersion}"
 
+    //custom
+    const val bottomBarAnimated = "io.github.canopas:bottombar:${Versions.bottomBarAnimated}"
+
 }

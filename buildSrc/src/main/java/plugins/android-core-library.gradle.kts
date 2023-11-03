@@ -48,4 +48,5 @@ dependencies{
     addHiltDependencies()
     addNetworkDependencies()
     addAndroidTestsDependencies()
+    addPagingDependencies()
 }

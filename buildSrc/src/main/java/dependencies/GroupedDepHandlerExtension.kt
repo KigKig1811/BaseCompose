@@ -72,3 +72,7 @@ fun DependencyHandler.addPagingDependencies() {
     add("implementation", Dependencies.pagingCompose)
 }
 
+fun DependencyHandler.addBottomBarAnimated() {
+    add("implementation", Dependencies.bottomBarAnimated)
+}
+
